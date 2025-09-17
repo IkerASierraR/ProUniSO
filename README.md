@@ -1,22 +1,29 @@
 # Simulador de Sistema Operativo Simple
 
-Este proyecto implementa un simulador sencillo de planificación de CPU y gestión de procesos, con fines educativos.  
-Permite analizar el comportamiento de distintos algoritmos y calcular métricas de desempeño de los procesos.
-
-
-## Requisitos
-
-- Python **3.8 o superior**  
-- No requiere librerías externas, funciona solo con la librería estándar de Python.  
+Este proyecto implementa un simulador sencillo de **planificación de CPU** y gestión de procesos, con fines educativos.  
+Permite analizar el comportamiento de distintos algoritmos y calcular métricas de desempeño de los procesos.  
 
 ---
 
-## Ejecución
+## Requisitos
 
-Ejecutar el simulador en modo interactivo:  
+- **C++11 o superior**  
+- Compilador como `g++` o el entorno de tu preferencia (Dev-C++, Code::Blocks, Visual Studio, etc.)  
+
+---
+
+## Compilación y ejecución
+
+Compilar el simulador:  
 
 ```bash
-python3 src/simulador_simple.py
+g++ simulador.cpp -o simulador
+```
+
+Ejecutar el programa:  
+
+```bash
+./simulador
 ```
 
 El programa pedirá:  
@@ -37,24 +44,21 @@ PID | Llegada | Servicio | Inicio | Fin | Respuesta | Espera | Retorno
 
 Entrada (modo interactivo):  
 ```
-¿Cuántos procesos desea ingresar? 3
+Cuantos procesos deseas ingresar: 3
 
-Proceso #1:
-  PID: 1
-  Llegada: 0
-  Servicio: 12
+PID: 1
+Tiempo de llegada: 0
+Tiempo de servicio: 12
 
-Proceso #2:
-  PID: 2
-  Llegada: 1
-  Servicio: 5
+PID: 2
+Tiempo de llegada: 1
+Tiempo de servicio: 5
 
-Proceso #3:
-  PID: 3
-  Llegada: 2
-  Servicio: 8
+PID: 3
+Tiempo de llegada: 2
+Tiempo de servicio: 8
 
-Algoritmo: RR
+Algoritmo (FCFS / SPN / RR): RR
 Quantum: 4
 ```
 
@@ -67,5 +71,3 @@ PID | Llegada | Servicio | Inicio | Fin | Respuesta | Espera | Retorno
 2   | 1       | 5        | 2      | 9   | 1         | 3      | 8
 3   | 2       | 8        | 9      | 21  | 7         | 11     | 19
 ```
-
----
